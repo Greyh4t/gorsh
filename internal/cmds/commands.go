@@ -5,6 +5,13 @@ import "github.com/abiosoft/ishell"
 func RegisterCommands(sh *ishell.Shell) {
 
 	sh.AddCmd(&ishell.Cmd{
+		Name:      "view",
+		Help:      "view <file>",
+		Func:      View,
+		Completer: CompLs,
+	})
+
+	sh.AddCmd(&ishell.Cmd{
 		Name: "enum",
 		Help: "Choose an embeded enumeration script",
 		Func: Enum,

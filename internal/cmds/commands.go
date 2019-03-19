@@ -12,6 +12,12 @@ func RegisterCommands(sh *ishell.Shell) {
 	})
 
 	sh.AddCmd(&ishell.Cmd{
+		Name: "cli",
+		Help: "Enter the machines local CLI. Mind your OPSEC",
+		Func: Cli,
+	})
+
+	sh.AddCmd(&ishell.Cmd{
 		Name: "enum",
 		Help: "Choose an embeded enumeration script",
 		Func: Enum,
